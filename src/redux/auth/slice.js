@@ -11,7 +11,7 @@ const initialState = {
   isRefreshing: false,
 };
 
-export const contactsSlice = createSlice({
+export const authSlice = createSlice({
   name: "user",
   initialState,
 
