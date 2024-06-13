@@ -5,10 +5,6 @@ import css from "./LoginForm.module.css";
 
   export const LoginForm = () => {
   const dispatch = useDispatch();
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
   const handleSubmit = (values, actions) => {
     dispatch(logIn(values))
       .unwrap()
@@ -16,23 +12,6 @@ import css from "./LoginForm.module.css";
       .catch((err) => console.log(err));
     actions.resetForm();
   };
-
-  //   dispatch(
-  //     logIn({
-  //       email: form.elements.email.value,
-  //       password: form.elements.password.value,
-  //     })
-  //   )
-  //     .unwrap()
-  //     .then(() => {
-  //       console.log("login success");
-  //     })
-  //     .catch(() => {
-  //       console.log("login error");
-  //     });
-
-  //   form.reset();
-  // };
 
   return (
     <Formik
