@@ -6,14 +6,13 @@ export default function SearchBox() {
   const dispatch = useDispatch();
 
   const filter = useSelector(selectNameFilter);
-
   const handleFilter = (e) => {
     const name = e.target.value.trim();
     dispatch(changeFilter(name));
   };
   return (
     <div>
-      <p className={css.label}>Find contacts by name</p>
+      <p className={css.label}>Find contacts by name/number</p>
       <input
         type="text"
         className={css.inputBox}
